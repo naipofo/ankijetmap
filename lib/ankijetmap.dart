@@ -38,7 +38,7 @@ Future<void> dumpFlashcards(String url) async {
       '<?xml version="1.0" encoding="UTF-8"?>${svgTemplate.outerHtml}',
     );
     fullCsv +=
-        '"${name.replaceAll('"', '""')}","<img alt="""" src=""$fn""/>,"<img alt="""" src=""$backgroundFn""/>"\n';
+        '"${name.replaceAll('"', '""')}","<img alt="""" src=""$fn""/>","<img alt="""" src=""$backgroundFn""/>"\n';
   }
 
   File('jmflashcards-$quizId.csv').writeAsString(fullCsv);

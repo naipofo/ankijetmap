@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<!-- FRONT -->
+<header>
+    {{#Tags}}
+    <div class="tags">{{Tags}}</div>
+    {{/Tags}}
+</header>
+<main>
+    {{Front}}
+    <div id="container">
+        {{Background}}
+        <div></div>
+    </div>
+</main>
+
+<!-- BACK -->
+<header>
+    {{#Tags}}
+    <div class="tags">{{Tags}}</div>
+    {{/Tags}}
+</header>
+<main>
+    {{Front}}
+    <div id="container">
+        {{Background}}
+        {{Mask}}
+    </div>
+</main>
+
+
+<!-- STYLE -->
+<style>
+    .card {
+        font-family: "Noto Serif", "Noto Serif CJK JP", "Times New Roman", "Merriweather", "Roboto Serif", serif, sans-serif;
+        font-synthesis: small-caps;
+        font-size: 2.3rem;
+        text-align: center;
+        color: black;
+        background-color: white;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+
+    .tags {
+        font-family: monospace;
+        font-size: .9rem;
+        opacity: .7;
+        text-align: left
+    }
+
+    #container {
+        position: relative;
+        display: inline-block;
+    }
+
+    #container img:last-child {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+</style>
